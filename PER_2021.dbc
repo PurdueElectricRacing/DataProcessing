@@ -1,0 +1,82 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Dashboard Peadlbox MainModule
+VAL_TABLE_ PrechargeState 1 "Complete" 0 "Incomplete" ;
+VAL_TABLE_ CarState 5 "Recover" 4 "Reset" 3 "Error" 2 "Ready_To_Drive" 1 "Pre_Ready_To_Drive" 0 "Init" ;
+VAL_TABLE_ TractionMode 2 "Launch Control" 1 "Tracton Control Enable" 0 "Traction Control Disable" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ MAIN_PrechargeStatus : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 5 MAIN_Heartbeat: 8 MainModule
+ SG_ MAIN_Heartbeat : 0|1@1+ (1,0) [0|1] ""  Dashboard,Peadlbox
+
+BO_ 4 MAIN_StateChange: 8 MainModule
+ SG_ MAIN_CarState : 0|3@1+ (1,0) [0|7] "State"  Peadlbox
+
+BO_ 3 PDL_Heartbeat: 1 Peadlbox
+ SG_ PDL_Heartbeat : 0|1@1+ (1,0) [0|1] "Life"  MainModule
+
+BO_ 2 DSH_Heartbeat: 1 Dashboard
+ SG_ DSH_Heartbeat : 0|1@1+ (1,0) [0|1] "Life"  MainModule
+
+BO_ 1 DSH_Buttons: 1 Dashboard
+ SG_ DSH_TractionMode : 1|2@1+ (1,0) [0|3] "State"  MainModule
+ SG_ DSH_StartButton : 0|1@1- (1,0) [0|0] "Boolean"  MainModule
+
+BO_ 0 PDL_Throttle: 7 Peadlbox
+ SG_ PDL_BreakPosition_b : 36|12@1+ (1,0) [0|4095] "%"  MainModule
+ SG_ PDL_BreakPosition_a : 24|12@1+ (1,0) [0|4095] "%"  MainModule
+ SG_ PDL_ThrottlePosition_b : 12|12@1+ (1,0) [0|4095] "%"  MainModule
+ SG_ PDL_ThrottlePosition_a : 0|12@1+ (1,0) [0|4095] "%"  MainModule
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 2 "Periodic Heartbeat for Dashboard";
+CM_ SG_ 1 DSH_TractionMode "Set traction control mode";
+CM_ SG_ 1 DSH_StartButton "Put car into ready to drive mode";
+CM_ SG_ 0 PDL_BreakPosition_b "Break position of preassure transducer B";
+CM_ SG_ 0 PDL_BreakPosition_a "Break position of preassure transducer A";
+CM_ SG_ 0 PDL_ThrottlePosition_b "Throttle position B";
+CM_ SG_ 0 PDL_ThrottlePosition_a "Throttle position";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 MAIN_PrechargeStatus 1 "Complete" 0 "Incomplete" ;
+VAL_ 4 MAIN_CarState 5 "Recover" 4 "Reset" 3 "Error" 2 "Ready_To_Drive" 1 "Pre_Ready_To_Drive" 0 "Init" ;
+VAL_ 1 DSH_TractionMode 2 "Launch Control" 1 "Tracton Control Enable" 0 "Traction Control Disable" ;
+
