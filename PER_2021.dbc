@@ -36,7 +36,7 @@ BS_:
 BU_: Dashboard Peadlbox MainModule
 VAL_TABLE_ PrechargeState 1 "Complete" 0 "Incomplete" ;
 VAL_TABLE_ CarState 5 "Recover" 4 "Reset" 3 "Error" 2 "Ready_To_Drive" 1 "Pre_Ready_To_Drive" 0 "Init" ;
-VAL_TABLE_ TractionMode 2 "Launch Control" 1 "Tracton Control Enable" 0 "Traction Control Disable" ;
+VAL_TABLE_ TractionMode 2 "Launch_Control" 1 "Tracton_Control_Enable" 0 "Traction_Control_Disable" ;
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
