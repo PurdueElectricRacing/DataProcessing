@@ -56,7 +56,7 @@ def generate_message_typedef(message: Message, per_mode: bool = True) -> str:
             else signal.name
 
         out += f"\t{sign}int{bit_len}_t {name};\n"
-    out += f"}} MSG_{message.name}_t;\n\n"
+    out += f"}} MSG_{message.name}_t;\n"
     return out
 
 
@@ -64,20 +64,48 @@ if __name__ == "__main__":
     my_db = cantools.db.load_file(filename=sys.argv[1])
     # Generate file header
 
-    # Generate ValueTables Header
-    # Generate ValueTables
-    value_tables = ''.join([
+    # Generate ValueTables Section
+    value_tables_header = \
+        """/* 
+*   Value Table Struct Definitions
+*/
+        """
+    value_tables = '\n'.join([
         generate_value_table(table_name, values)
         for table_name, values in my_db.dbc.value_tables.items()
-        ])
+    ])
+    values_section = '\n'.join([value_tables_header, value_tables])
 
-    # Generate message structs
-    message_structs = ''.join([
+    # Generate Message structs Section
+    message_structs_header = \
+        """/* 
+*   Message Struct Definitions
+*/
+        """
+    message_structs = '\n'.join([
         generate_message_typedef(message)
         for message in my_db.messages
     ])
+    struct_section = '\n'.join([message_structs_header, message_structs])
 
-    output = "\n\n".join([value_tables, message_structs])
+    # Generate message pack function decelerations section
+    pack_header = \
+        """/* 
+*   Message packing function decelerations
+*/
+        """
+    pack = '// TODO: Generate pack functions decelerations'
+    pack_section = '\n'.join([pack_header, pack])
+
+    # Generate message unpack function decelerations section
+    unpack_header = \
+        """/* 
+*   Message unpacking function decelerations
+*/"""
+    unpack = '// TODO: Generate unpack functions decelerations'
+    unpack_section = '\n'.join([unpack_header, unpack])
+
+    output = "\n\n".join([values_section, struct_section, pack_section, unpack_section])
     print(output)
 
 
