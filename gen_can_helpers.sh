@@ -1,1 +1,0 @@
-cantools generate_c_source PER_2021.dbc --no-floating-point-numbers

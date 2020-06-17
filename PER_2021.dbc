@@ -78,5 +78,5 @@ BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "BusType" "CAN";
 VAL_ 3221225472 MAIN_PrechargeStatus 1 "Complete" 0 "Incomplete" ;
 VAL_ 4 MAIN_CarState 5 "Recover" 4 "Reset" 3 "Error" 2 "Ready_To_Drive" 1 "Pre_Ready_To_Drive" 0 "Init" ;
-VAL_ 1 DSH_TractionMode 2 "Launch Control" 1 "Tracton Control Enable" 0 "Traction Control Disable" ;
+VAL_ 1 DSH_TractionMode 2 "Launch_Control" 1 "Tracton_Control_Enable" 0 "Traction_Control_Disable" ;
 

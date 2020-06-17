@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="736aaf72-5dbe-41e0-8907-ef6287b6bde2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DataProcessing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PER_2021.dbc" beforeDir="false" afterPath="$PROJECT_DIR$/PER_2021.dbc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen_can_helpers.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/per_2021.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/per_2021.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/per_gen_can.py" beforeDir="false" afterPath="$PROJECT_DIR$/per_gen_can.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1d9HmcjiCzD2atHVbBlaghaNJmu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/per_gen_can.py" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="DataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="per_gen_can" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="DataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/per_gen_can.py" />
+      <option name="PARAMETERS" value="$FileDir$/PER_2021.dbc" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="736aaf72-5dbe-41e0-8907-ef6287b6bde2" name="Default Changelist" comment="" />
+      <created>1591830548756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591830548756</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="424" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591831516211">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="424" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591831516211" />
+    <state x="747" y="136" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1591831485910">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="747" y="136" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591831485910" />
+    <state x="747" y="186" key="FileChooserDialogImpl" timestamp="1591831466907">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="747" y="186" key="FileChooserDialogImpl/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591831466907" />
+    <state width="1897" height="274" key="GridCell.Tab.0.bottom" timestamp="1592355702235">
+      <screen x="0" y="0" width="2880" height="1043" />
+    </state>
+    <state width="1897" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591835969834" />
+    <state width="1897" height="274" key="GridCell.Tab.0.bottom/0.0.2880.1043@0.0.2880.1043" timestamp="1592355702235" />
+    <state width="1897" height="274" key="GridCell.Tab.0.center" timestamp="1592355702234">
+      <screen x="0" y="0" width="2880" height="1043" />
+    </state>
+    <state width="1897" height="274" key="GridCell.Tab.0.center/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591835969834" />
+    <state width="1897" height="274" key="GridCell.Tab.0.center/0.0.2880.1043@0.0.2880.1043" timestamp="1592355702234" />
+    <state width="1897" height="274" key="GridCell.Tab.0.left" timestamp="1592355702234">
+      <screen x="0" y="0" width="2880" height="1043" />
+    </state>
+    <state width="1897" height="274" key="GridCell.Tab.0.left/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591835969833" />
+    <state width="1897" height="274" key="GridCell.Tab.0.left/0.0.2880.1043@0.0.2880.1043" timestamp="1592355702234" />
+    <state width="1897" height="274" key="GridCell.Tab.0.right" timestamp="1592355702235">
+      <screen x="0" y="0" width="2880" height="1043" />
+    </state>
+    <state width="1897" height="274" key="GridCell.Tab.0.right/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591835969834" />
+    <state width="1897" height="274" key="GridCell.Tab.0.right/0.0.2880.1043@0.0.2880.1043" timestamp="1592355702235" />
+    <state x="623" y="206" key="search.everywhere.popup" timestamp="1591834725579">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="623" y="206" key="search.everywhere.popup/0.0.1920.1043/1920.0.960.540@0.0.1920.1043" timestamp="1591834725579" />
+  </component>
+</project>
