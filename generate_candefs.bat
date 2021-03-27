@@ -1,0 +1,1 @@
+cog -d -e -ocandefs.h -Ddbc_filepath=PER_2021_j1939.dbc candefs_generator.h
