@@ -38,16 +38,20 @@ BU_: Logger Dashboard BMS MainModule Pedalbox
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ EMDRIVE_CurrentActual : 0|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_CurrentDemand : 0|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_LogicVoltage : 0|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_DCLinkVoltage : 0|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_MotorTemp : 0|8@0+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_ControllerTemp : 0|8@0+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_TorqueActual : 0|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_Position : 0|32@0+ (1,0) [0|0] "" Vector__XXX
- SG_ EMDRIVE_StatusWord : 0|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Brake_Pedal_Implaus : 0|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Calibrate_Pedal_Position : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 641 EMDRIVE_TPDO2: 8 Vector__XXX
+ SG_ EMDRIVE_MotorTemp : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMDRIVE_LogicVoltage : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMDRIVE_DCLinkVoltage : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMDRIVE_CurrentDemand : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMDRIVE_ControllerTemp : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 385 EMDRIVE_TPDO1: 8 Vector__XXX
+ SG_ EMDRIVE_TorqueActual : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMDRIVE_StatusWord : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EMDRIVE_Position : 23|32@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1027 BMS_AccumulatorData: 6 BMS
  SG_ Accumulator_V : 32|12@1+ (1,0) [0|4095] ""  Logger,MainModule
@@ -81,18 +85,18 @@ BO_ 1056 Main_Heartbeat: 3 MainModule
  SG_ APPS_State : 0|2@1+ (1,0) [0|255] ""  Logger
 
 BO_ 258 Pedal_Positions: 8 Pedalbox
- SG_ Throttle_Position_B : 48|12@1+ (0.00024420024,0) [0|4095] "%"  Logger,MainModule
- SG_ Throttle_Position_A : 32|12@1+ (0.00024420024,0) [0|4095] "%"  Logger,MainModule
- SG_ Brake_Position_B : 16|12@1+ (0.00024420024,0) [0|4095] "%"  Logger,MainModule
- SG_ Brake_Position_A : 0|12@1+ (0.00024420024,0) [0|4095] "%"  Logger,MainModule
+ SG_ Throttle_Position_B : 51|12@0+ (0.00024420024,0) [0|0.9999999828] "%"  Logger,MainModule
+ SG_ Throttle_Position_A : 35|12@0+ (0.00024420024,0) [0|0.9999999828] "%"  Logger,MainModule
+ SG_ Brake_Position_B : 19|12@0+ (0.00024420024,0) [0|0.9999999828] "%"  Logger,MainModule
+ SG_ Brake_Position_A : 3|12@0+ (0.00024420024,0) [0|0.9999999828] "%"  Logger,MainModule
 
 
 
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
-CM_ SG_ 3221225472 EMDRIVE_TorqueActual "EMDRIVE actual torque value";
-CM_ SG_ 3221225472 EMDRIVE_Position "Motor position";
-CM_ SG_ 3221225472 EMDRIVE_StatusWord "EMDRIVE status";
 CM_ SG_ 3221225472 Calibrate_Pedal_Position "Calibrate min/max throttle travel position";
+CM_ SG_ 385 EMDRIVE_TorqueActual "EMDRIVE actual torque value";
+CM_ SG_ 385 EMDRIVE_StatusWord "EMDRIVE status";
+CM_ SG_ 385 EMDRIVE_Position "Motor position";
 CM_ SG_ 1027 Accumulator_V "Instantanious accumulator voltage measurment";
 CM_ SG_ 1027 Accumulator_SOC "Instantanious accumulator SOC estmation";
 CM_ SG_ 1027 Accumulator_I "Instantanious accumulator current measurment";
@@ -188,22 +192,24 @@ BA_ "NmStationAddress" BU_ Dashboard 163;
 BA_ "NmStationAddress" BU_ BMS 162;
 BA_ "NmStationAddress" BU_ MainModule 160;
 BA_ "NmStationAddress" BU_ Pedalbox 161;
-BA_ "VFrameFormat" BO_ 1027 0;
+BA_ "VFrameFormat" BO_ 641 0;
+BA_ "VFrameFormat" BO_ 385 0;
 BA_ "GenMsgSendType" BO_ 1027 0;
+BA_ "VFrameFormat" BO_ 1027 0;
 BA_ "VFrameFormat" BO_ 1713 0;
-BA_ "VFrameFormat" BO_ 1026 0;
 BA_ "GenMsgSendType" BO_ 1026 0;
-BA_ "VFrameFormat" BO_ 1025 0;
+BA_ "VFrameFormat" BO_ 1026 0;
 BA_ "GenMsgSendType" BO_ 1025 0;
-BA_ "VFrameFormat" BO_ 849 0;
+BA_ "VFrameFormat" BO_ 1025 0;
 BA_ "GenMsgSendType" BO_ 849 2;
-BA_ "VFrameFormat" BO_ 848 0;
+BA_ "VFrameFormat" BO_ 849 0;
 BA_ "GenMsgSendType" BO_ 848 2;
-BA_ "VFrameFormat" BO_ 1056 0;
+BA_ "VFrameFormat" BO_ 848 0;
 BA_ "GenMsgSendType" BO_ 1056 0;
-BA_ "VFrameFormat" BO_ 258 0;
-BA_ "GenMsgCycleTime" BO_ 258 10;
+BA_ "VFrameFormat" BO_ 1056 0;
 BA_ "GenMsgSendType" BO_ 258 0;
+BA_ "GenMsgCycleTime" BO_ 258 10;
+BA_ "VFrameFormat" BO_ 258 0;
 BA_ "GenSigSendType" SG_ 3221225472 Calibrate_Pedal_Position 1;
 BA_ "GenSigSendType" SG_ 1026 Cell_Temperature_Low 0;
 BA_ "GenSigSendType" SG_ 1026 Cell_Temperature_High 0;
