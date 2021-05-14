@@ -44,7 +44,7 @@ def candump_to_series(dbcfile_path: str, logfile_path: str):
 		if m_id in all_ids:
 			dbc_message = dbc.get_message_by_frame_id(m_id)
 			try:
-				decoded = dbc.decode_message(frame_id_or_name=m_id, data=bytes.fromhex(data), scaling=False)
+				decoded = dbc.decode_message(frame_id_or_name=m_id, data=bytes.fromhex(data), scaling=True, decode_choices=False)
 				all_dfs[dbc_message.name].append(pd.DataFrame(decoded, index=[timestamp]))
 			except:
 				# Some messages have length mis-matches in the DBC, let the user know that this ID is messed up
@@ -67,12 +67,14 @@ def candump_to_series(dbcfile_path: str, logfile_path: str):
 
 if __name__ == "__main__":
 
-	if len(sys.argv == 3):
+	if len(sys.argv) == 3:
 		dbcfile_path = sys.argv[1]
 		logfile_path = sys.argv[2]
 
-		all_signals = candump_to_series(dbc_filepath, logfile_path)
+		all_signals = candump_to_series(dbcfile_path, logfile_path)
+
+		print(all_signals["Throttle_Position_A"][:10])
 		candump_time = re.match(".*candump-(.*)\.log", logfile_path).group(1)
 		pd.DataFrame(all_signals).to_csv(f"parsed-{candump_time}.csv")
-	else
+	else:
 		print("Invlalid usage. Please provide a DBC file path and candump filepath")
